@@ -1,1 +1,18 @@
 #transivers
+#arduino
+#transiver tests
+import serial
+import time
+import nRF24L01.h
+import RF24.h
+
+sport ='COM$'
+baud_rate = 9600
+
+
+serial_data = serial.Serial(sport, baud_rate)
+
+
+
+
+sdata = serial_data.readline()
