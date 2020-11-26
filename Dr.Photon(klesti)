@@ -16,3 +16,23 @@ serial_data = serial.Serial(sport, baud_rate)
 
 
 sdata = serial_data.readline()
+
+##########################################3
+#import Serial
+import time
+
+s=serial.Serial(port)
+
+global Id
+global krahu =0
+def transimit:
+    krahu = 1
+    s.Write(Id,krahu)
+    s.close()
+
+
+
+
+transimit()
+
+##########################################33
