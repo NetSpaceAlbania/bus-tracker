@@ -17,22 +17,38 @@ serial_data = serial.Serial(sport, baud_rate)
 
 sdata = serial_data.readline()
 
+
+
+new code 2
 ##########################################3
-#import Serial
+import Serial
 import time
 
-s=serial.Serial(port)
+s=serial.Serial(port=???,...) #set porten baudrate etj etj
+delay(3)  #set nje time delay per te bere connection me porten
 
-global Id
-global krahu =0
+# kto i bera global sa per test mund ti ndyshojme pastaj
+global Id           #id e bus dhe te linjes
+global krahu =0      #krahu nenkupton vajte apo kthim
+
+
+#funx ketu ben check stacionit dhe ne baze te stacionit percakton krahun e autobuzit
+def check_stacionin:
+    stacioni = s.readline()
+    if stacioni == 0:
+        krahu = 0
+    if stacioni == 'F':
+        krahu = 1
+
+
+#funx ketu ben transmetimin e te dhenave ne stacion
 def transimit:
-    krahu = 1
     s.Write(Id,krahu)
     s.close()
 
 
 
-
-transimit()
-
+while 1:
+    check_stacionin()
+    transimit()
 ##########################################33
