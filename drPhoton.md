@@ -1,3 +1,5 @@
+my code is just for a general idea 
+
 #transivers
 #arduino
 #transiver tests
