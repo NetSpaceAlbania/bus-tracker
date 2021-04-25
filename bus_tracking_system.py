@@ -101,6 +101,7 @@ class TrackingSystem:
         estimated_time = 120
         # return approaching bus_number and time
         next_station = "fetch location, check direction, announce"
+        
 
         return next_station
 
