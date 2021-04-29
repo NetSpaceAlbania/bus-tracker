@@ -19,7 +19,7 @@ system_scheduler.md
 
 
 ## Comments
-
+- Web-enabled simulator for simulating scenarios 
 ## future Steps
 - Enable NFC cards
 - Use USB powered electronics with 5V power level operation
