@@ -1,5 +1,5 @@
 # Classes and implemented functions for bus tracking system
-
+import queue
 """
 trackingSystem
     ...
@@ -139,3 +139,11 @@ physics = SystemPhysics()
 # print('hello from system physics',physics)
 
 print(f'bus {bus} is {eta} minutes way from station {station} at location {gps_data}')
+
+
+#this class will calc the trafic on the stations "mindnodes"
+class trafic_calc:
+    
+    # this function will check if there are more then 2 busess comming to the midnode and will display
+    #only the 1 one commning 
+   
