@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Starting Kafka server/broker and zookeeper"
+
+sleep 1 # suspend for x seconds
+
+echo "starting zookeeper: $(bin/zookeeper-server-start.sh config/zookeeper.properties)"
+
+# echo "$(bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092)"
+# echo "call command from terminal like this  $(whoami)""
+
+echo "Script executed!"
