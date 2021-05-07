@@ -9,3 +9,4 @@ zoomOffset: -1,
 id: 'mapbox/streets-v11',
 accessToken: 'pk.eyJ1IjoiaGFja2Vyc3BhY2VhbGJhbmlhIiwiYSI6ImNrb2E3dHczazAzeDIycG9kY2EyMjV1dncifQ.LnFZVoR69jnFIIZImLZOmw'
 }).addTo(mymap);
+
