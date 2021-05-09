@@ -13,32 +13,7 @@ accessToken: 'pk.eyJ1IjoiaGFja2Vyc3BhY2VhbGJhbmlhIiwiYSI6ImNrb2E3dHczazAzeDIycG9
 
 // adding markers for the bus stations
 
-var busIcon = L.icon({
-    iconUrl: '/static/bus.png',
-    iconSize:     [38, 39], // size of the icon
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
-
-// todo: parse bus coordinates, read latlon and then feed them to the marker
-L.marker([41.306576, 19.796567], {icon: busIcon}).addTo(map);
-
-var busStop = L.icon({
-    iconUrl: '/static/busstop.png',
-    iconSize:     [39, 43], // size of the icon
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
-
-// todo: parse coordinates from geojson, read latlon and then feed to the marker
-L.marker([41.350581, 19.831421], {icon: busStop}).addTo(map);
-
-
-var busline = L.marker([41.306576, 19.796567]).addTo(map);
-stationMarker.bindPopup("Starting station").openPopup();
-
-//var busline2 = L.marker([41.35, 19.83]).addTo(map);
-//busline2.bindPopup("End station").openPopup(False);
+L.marker([41.32, 19.83]).addTo(map);
 
 
 // Simulation of live buses
