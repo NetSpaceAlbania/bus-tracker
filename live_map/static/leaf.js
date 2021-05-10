@@ -1,6 +1,6 @@
 // tile layer for the map
 
-var map = L.map('map').setView([41.3268505,19.8205273], 13);
+var map = L.map('mapid').setView([41.3268505,19.8205273], 13);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
 tileSize: 512,
@@ -13,7 +13,15 @@ accessToken: 'pk.eyJ1IjoiaGFja2Vyc3BhY2VhbGJhbmlhIiwiYSI6ImNrb2E3dHczazAzeDIycG9
 
 // adding markers for the bus stations
 
-L.marker([41.32, 19.83]).addTo(map);
+var polygon = L.polygon([
+  [41.32605,19.05273],
+  [41.8505,19.82273],
+  [41.32505,19.82052]
+]).addTo(map);
+
+
+// Adding lines
+
 
 
 // Simulation of live buses
@@ -32,7 +40,7 @@ source.addEventListener('message', function(e){
     for (var i = 0; i < mapMarkers1.length; i++) {
       mymap.removeLayer(mapMarkers1[i]);
     }
-    marker1 = L.marker([obj.latitude, obj.longitude]).addTo(mymap);
+    marker1 = L.marker([obj.latitude, obj.longitude]).addTo(map);
     mapMarkers1.push(marker1);
   }
 
