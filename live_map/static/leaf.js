@@ -10,33 +10,12 @@ accessToken: 'pk.eyJ1IjoiaGFja2Vyc3BhY2VhbGJhbmlhIiwiYSI6ImNrb2E3dHczazAzeDIycG9
 }).addTo(map);
 
 // adding markers for the bus stations
-var marker = L.marker([41.3268505,19.8205273]).addTo(map);
-
-/*
-// adding polygon
-var polygon = L.polygon([
-  [41.326805,19.05273],
-  [41.85805,19.82273],
-  [41.328505,19.82052]
-]).addTo(map);
-
-// leaflet event popup
-
-var popup = L.popup();
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
-}
-map.on('click', onMapClick);
-
-*/
+var marker1 = L.marker([41.3268505,19.8205273]).addTo(map);
 
 
 // Simulation of live buses
 
-linja1 = [];
+mapMarkers1 = [];
 
 
 var source = new EventSource('/topic/TOPICNAME'); //ENTER YOUR TOPICNAME HERE
@@ -48,7 +27,7 @@ source.addEventListener('message', function(e){
 
   if(obj.busline == '00001') {
     for (var i = 0; i < mapMarkers1.length; i++) {
-      mymap.removeLayer(mapMarkers1[i]);
+      map.removeLayer(mapMarkers1[i]);
     }
     marker1 = L.marker([obj.latitude, obj.longitude]).addTo(map);
     mapMarkers1.push(marker1);

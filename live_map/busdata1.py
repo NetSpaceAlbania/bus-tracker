@@ -1,15 +1,16 @@
 from pykafka import KafkaClient
-import geojson
+#import geojson
+import json
 from datetime import datetime
 import uuid
 import time
 
 # read input date from geojson file
-input_file = open('./data/linja1.geojson')
-geojson_array = geojson.load(input_file)
+input_file = open('./data/bus1.json')
+json_array = json.load(input_file)
 
-print ("geojson", geojson_array)
-coordinates = geojson_array['coordinates']
+print ("json", json_array)
+coordinates = json_array['features'][0]['geometry']['coordinates']
 
 # generate uuid
 def generate_uuid():
@@ -17,7 +18,7 @@ def generate_uuid():
 
 # start kafka
 client = KafkaClient(hosts="localhost:9092")
-topic = client.topics['geodata_final123']
+topic = client.topics['geodata']
 producer = topic.get_sync_producer()
 
 # format the message and send it to kafka
