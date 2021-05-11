@@ -5,6 +5,22 @@ The Message Queueuing Telemetry Transport (MQTT) ky i fundit  eshte nje protokol
 
 """
 
+import paho.mqtt.client as mqtt
+from random import randrange, uniform
+import time
+
+mqttBroker ="mqtt.eclipseprojects.io"
+
+client = mqtt.Client("Koordinatat gjeografike")
+client.connect(mqttBroker)
+
+while True:
+    randNumber = uniform(20.0, 21.0)
+    client.publish("bus", randNumber)
+    print("sapo u publikua " + str(randNumber) + " tek tema bus")
+    time.sleep(1)
+
+
 
 def gateway():
     """
@@ -29,4 +45,3 @@ def mqtt_broker():
     pub_devices = "pajisjet publikuese ne hyrje"
     sub_devices = "pajisjet e abonuara ne dalje"
     topic_clients = "teresia e pajisjeve te lidhura tek tematikat"
-
