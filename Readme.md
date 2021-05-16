@@ -16,5 +16,4 @@ Per kedo qe deshiron te shikoje ndjeke nje demo te ketij projekti mund te vizito
 
 
 ## Te tjera
-Detaje me te hollesishme dhe informacione te tjera ne lidhje me kete projekt mund te gjenden tek: docs/
--projekti.md
+Detaje me te hollesishme dhe informacione te tjera ne lidhje me kete projekt mund te gjenden tek: docs/projekti.md
