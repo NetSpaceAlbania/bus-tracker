@@ -12,7 +12,7 @@ Instalimi i ketij projekti mundeson nisjen e nje modeli qe realizon nje simulim 
 3. docker-compose bustracker.yml
 
 ## Ekspozita e projektit
-Per kedo qe deshiron te shikoje nje demo te ketij projekti mund te vizitoje faqen e [Gihub Hackerspace Albania](https://hackerspacealbania.github.io/)
+Per kedo qe deshiron te shikoje nje demo te ketij projekti mund te vizitoje faqen e [Github Hackerspace Albania](https://hackerspacealbania.github.io/)
 
 
 ## Te tjera
