@@ -13,7 +13,7 @@ shembull nga perdorimi i git:
 
   $ git commit -m "Pershkrimi i shkurter i ceshtjes
   > 
-  > A paragraph describing what changed and its impact."
+  > Pershktimi i ndryshimeve "
   
   
   Faleminderit!
