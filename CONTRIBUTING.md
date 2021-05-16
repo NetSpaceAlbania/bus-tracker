@@ -11,9 +11,7 @@ U lutemi te dergoni nje [pull request](https://github.com/HackerspaceAlbania/bus
 Cka do ishte shkelqyeshem nga kontributi i juaj qendron tek dokumentimi sa me i detajuar i ndryshmeve. Per ruajtjen e standartit te modelit, sugjerojme qe commit-et te jene te shkurtra dhe te qarta.
 shembull nga perdorimi i git:
 
-  $ git commit -m "Pershkrimi i shkurter i ceshtjes
-  > 
-  > Pershkrimi i ndryshimeve "
+  $ git commit -m "Pershkrimi i shkurter i ceshtjes"
   
   
   Faleminderit!
