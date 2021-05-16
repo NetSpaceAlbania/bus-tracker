@@ -12,12 +12,8 @@ Instalimi i ketij projekti mundeson nisjen e nje modeli qe realizon nje simulim 
 3. docker-compose bustracker.yml
 
 ## Ekspozita e projektit
-<<<<<<< HEAD:README.md
 Per kedo qe deshiron te shikoje nje demo te ketij projekti mund te vizitoje faqen e [Github Hackerspace Albania](https://hackerspacealbania.github.io/)
-=======
 Per kedo qe deshiron te shikoje nje demo te ketij projekti mund te vizitoje faqen e integruar ne github dhe se shpejti presim te hapim projekt galerine tek wefaqja jone [HackerspaceAlbania](https://www.hackerspacealbania.al)
->>>>>>> main/development:Readme.md
-
 
 ## Te tjera
 Detaje me te hollesishme dhe informacione te tjera ne lidhje me kete projekt mund te gjenden tek: docs/projekti.md
