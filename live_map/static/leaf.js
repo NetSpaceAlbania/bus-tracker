@@ -11,8 +11,9 @@ accessToken: 'pk.eyJ1IjoiaGFja2Vyc3BhY2VhbGJhbmlhIiwiYSI6ImNrb2E3dHczazAzeDIycG9
 
 // adding markers for the bus stations
 var marker1 = L.marker([41.3268305,19.8205273]).addTo(map);
-//var marker2 = L.marker([41.3368305,19.8205273]).addTo(map);
-//var marker3 = L.marker([41.3368305,19.8305273]).addTo(map);
+
+// var marker2 = L.marker([lon,lat]).addTo(map);
+// var marker3 = L.marker([41.3368305,19.8305273]).addTo(map);
 
 // Simulation of live buses
 
