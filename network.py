@@ -7,11 +7,19 @@ import time
 
 # Komunikimi midis tre nyjeve
 
+"""
+node 1 [id, data] - node2 [id, data]
+
+"""
+
 def nyja1():
     tx= True
     rx = False
-    nid='nyja1'
-    packet=[123]
+    nid='nyja001'
+    tstamp=time.time()
+    data = 123
+    status = 'not ack'
+    packet=[nid,tstamp,data, status]
 
     print(packet)
 
