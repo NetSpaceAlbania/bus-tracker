@@ -9,57 +9,39 @@ id: 'mapbox/streets-v11',
 accessToken: 'pk.eyJ1IjoiaGFja2Vyc3BhY2VhbGJhbmlhIiwiYSI6ImNrb2E3dHczazAzeDIycG9kY2EyMjV1dncifQ.LnFZVoR69jnFIIZImLZOmw'
 }).addTo(map);
 
-// adding markers for the bus stations
-var marker1 = L.marker([41.3268305,19.8205273]).addTo(map);
-//var marker2 = L.marker([41.3368305,19.8205273]).addTo(map);
-//var marker3 = L.marker([41.3368305,19.8305273]).addTo(map);
+// TODO: leximi i koordinatave bazuar nga ../linja1.geojson
 
-// Simulation of live buses
+let lat = 41.3268305
+let lon = 19.8205273
+var marker1 = L.marker([lat,lon]).addTo(map);
 
-mapMarkers1 = [];
+// var marker2 = L.marker([lon,lat]).addTo(map);
+// var marker3 = L.marker([41.3368305,19.8305273]).addTo(map);
 
-
-var myObj, myJSON, text, obj;
-
-// Storing data:
-myObj = { name: "John", age: 31, city: "New York" };
-myJSON = JSON.stringify(myObj);
-localStorage.setItem("testJSON", myJSON);
-
-// Retrieving data:
-text = localStorage.getItem("testJSON");
-obj = JSON.parse(text);
-document.getElementById("demo").innerHTML = obj.name;
-
-myFunction(myArray);
-
-function myFunction(arr) {
-  var out = "";
-  var i;
-  for(i = 0; i < arr.length; i++) {
-    out += '<a href="' + arr[i].url + '">' + 
-    arr[i].display + '</a><br>';
-  }
-  document.getElementById("id01").innerHTML = out;
-}
+// TODO: perditesimi dhe projektimi i koordinatave ne menyre automatike per nje linje, marker1
 
 
-//var source = new EventSource('/topic/TOPICNAME'); //ENTER YOUR TOPICNAME HERE
-var source = {"lon:":41.368305, "lat":19.8205273}
-
-source.addEventListener('message', function(e){
-
-  console.log('Message');
-  obj = JSON.parse(e.data);
-  console.log(obj);
-
-  if(obj.busline == '00001') {
-    for (var i = 0; i < mapMarkers1.length; i++) {
-      map.removeLayer(mapMarkers1[i]);
-    }
-    marker1 = L.marker([obj.latitude, obj.longitude]).addTo(map);
-    mapMarkers1.push(marker1);
-  }
+// TODO: perditeso per 3 linja, marker1, 2, 3.
 
 
-}, false);
+// LoRA network coverage
+let lora_range = 30
+var circle = L.circle([41.3268305,19.8205273], {
+  color: 'red',
+  fillColor: '#f03',
+  fillOpacity: 0.3,
+  radius: lora_range
+}).addTo(map);
+
+
+// Repeater network coverage
+let repeater_range = 30
+var circle = L.circle([41.3268305,19.8205273], {
+  color: 'red',
+  fillColor: '#f05',
+  fillOpacity: 0.5,
+  radius: repeater_range
+}).addTo(map);
+
+
+// Geojson feature
