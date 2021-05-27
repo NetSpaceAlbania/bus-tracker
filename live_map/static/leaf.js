@@ -9,25 +9,39 @@ id: 'mapbox/streets-v11',
 accessToken: 'pk.eyJ1IjoiaGFja2Vyc3BhY2VhbGJhbmlhIiwiYSI6ImNrb2E3dHczazAzeDIycG9kY2EyMjV1dncifQ.LnFZVoR69jnFIIZImLZOmw'
 }).addTo(map);
 
-// adding markers for the bus stations
+// TODO: leximi i koordinatave bazuar nga ../linja1.geojson
 
-lat = Array [123]
-var marker1 = L.marker([41.3268305,19.8205273]).addTo(map);
+let lat = 41.3268305
+let lon = 19.8205273
+var marker1 = L.marker([lat,lon]).addTo(map);
 
 // var marker2 = L.marker([lon,lat]).addTo(map);
 // var marker3 = L.marker([41.3368305,19.8305273]).addTo(map);
 
-// LoRA network coverage
+// TODO: perditesimi dhe projektimi i koordinatave ne menyre automatike per nje linje, marker1
 
+
+// TODO: perditeso per 3 linja, marker1, 2, 3.
+
+
+// LoRA network coverage
+let lora_range = 30
 var circle = L.circle([41.3268305,19.8205273], {
   color: 'red',
   fillColor: '#f03',
+  fillOpacity: 0.3,
+  radius: lora_range
+}).addTo(map);
+
+
+// Repeater network coverage
+let repeater_range = 30
+var circle = L.circle([41.3268305,19.8205273], {
+  color: 'red',
+  fillColor: '#f05',
   fillOpacity: 0.5,
-  radius: 3
+  radius: repeater_range
 }).addTo(map);
 
 
 // Geojson feature
-
-
-// Simulation of live buses
