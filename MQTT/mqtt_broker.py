@@ -1,6 +1,8 @@
 """
 
-The Message Queueuing Telemetry Transport (MQTT) ky i fundit  eshte nje protokoll i konceptuar te punoje mbi nivelin TCP/IP per te mundesuar komunikimin midis pajisjeve. Metodika e komunikimit qe perdoret nga MQTT njihet si metoda Publish-Subscribe, PubSub.
+The Message Queueuing Telemetry Transport (MQTT) nje protokoll i konceptuar te punoje mbi nivelin TCP/IP
+per te mundesuar komunikimin midis pajisjeve.
+Metodika e komunikimit qe perdoret nga MQTT njihet si metoda Publish-Subscribe, PubSub.
 
 
 """
@@ -19,6 +21,8 @@ while True:
     client.publish("bus", randNumber)
     print("sapo u publikua " + str(randNumber) + " tek tema bus")
     time.sleep(1)
+    # Testim i veprimit
+    break
 
 
 
@@ -33,7 +37,7 @@ def gateway():
     pubsub_state = "Vertete/Gabuar"
     gateway_devices = "pajisjet e lidhura ne gateway"
 
-    return ("raportimin e mesazheve te mbledhura tek pajisjet e abonuara")
+    print ("raportimin e mesazheve te mbledhura tek pajisjet e abonuara", nodes)
 
 
 def mqtt_broker():
@@ -45,3 +49,5 @@ def mqtt_broker():
     pub_devices = "pajisjet publikuese ne hyrje"
     sub_devices = "pajisjet e abonuara ne dalje"
     topic_clients = "teresia e pajisjeve te lidhura tek tematikat"
+
+    print("tematikat, pajisjet, klientet", pub_devices, sub_devices, topic_clients)
