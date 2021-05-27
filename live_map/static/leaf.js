@@ -10,6 +10,8 @@ accessToken: 'pk.eyJ1IjoiaGFja2Vyc3BhY2VhbGJhbmlhIiwiYSI6ImNrb2E3dHczazAzeDIycG9
 }).addTo(map);
 
 // adding markers for the bus stations
+
+lat = Array [123]
 var marker1 = L.marker([41.3268305,19.8205273]).addTo(map);
 
 // var marker2 = L.marker([lon,lat]).addTo(map);
