@@ -1,6 +1,12 @@
 """
 The scheduling system for bus lines and their timetable
 Sistemi i planifikimit te orareve per linjat dhe oraret e tyre
+
+Tabela Orareve  ----> linjat
+[linja 1 x min]       [linjat 'nr','emri i stacionit']  
+
+
+
 """
 # burimi i te dhenatve per linjat
 linjat_db = {
