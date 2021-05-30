@@ -9,4 +9,6 @@ def getlatlon():
 
 def correction():
     "error correction and calibration of modules"
+    pass
+
 
