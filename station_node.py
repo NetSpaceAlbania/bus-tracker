@@ -29,7 +29,6 @@ buss_data = [buss_ID, buss_location ]
 
 
 
-
 # this function  will gether data for all nodes in its range that are in the buss_node_list
 def start_gethering:
     get_buss_id = "form input data get 'BNr' & 'LNr'"
